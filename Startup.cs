@@ -9,8 +9,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
+using MVCDEMO.Data;
 
-namespace MvcDeMo
+namespace MVCDEMO
 {
     public class Startup
     {

@@ -6,8 +6,9 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using MVCDEMO.Models;
+using MVCDEMO.Data;
 
-namespace MvcDeMo.Controllers
+namespace MVCDEMO.Controllers
 {
     public class EmployeeController : Controller
     {

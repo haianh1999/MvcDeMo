@@ -3,8 +3,9 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
+using MVCDEMO.Data;
 
-namespace MvcDeMo.Migrations
+namespace MVCDEMO.Migrations
 {
     [DbContext(typeof(ApplicationDBContext))]
     [Migration("20211108011048_InitialCreate")]

@@ -1,10 +1,11 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-using MvcMovie.Data;
+using Asp.netCore.Models;
+using MVCDEMO.Data;
 using System;
 using System.Linq;
 
-namespace MvcDeMo.Models
+namespace MVCDEMO.Models
 {
     public static class SeedData
     {
@@ -20,37 +21,37 @@ namespace MvcDeMo.Models
                     return;   // DB has been seeded
                 }
 
-                context.Movie.AddRange(
-                    new Movie
+                context.Student.AddRange(
+                    new Student
                     {
-                        Title = "When Harry Met Sally",
-                        ReleaseDate = DateTime.Parse("1989-2-12"),
-                        Genre = "Romantic Comedy",
-                        Price = 7.99M
+                        StudentId = "STD05",
+                        StudentName = "Nguyễn NT",
+                        address = "Nam Định",
+
                     },
 
-                    new Movie
+                    new Student
                     {
-                        Title = "Ghostbusters ",
-                        ReleaseDate = DateTime.Parse("1984-3-13"),
-                        Genre = "Comedy",
-                        Price = 8.99M
+                        StudentId = "STD06",
+                        StudentName = "Hải Anh",
+                        address = "Hà Nội",
+
                     },
 
-                    new Movie
+                    new Student
                     {
-                        Title = "Ghostbusters 2",
-                        ReleaseDate = DateTime.Parse("1986-2-23"),
-                        Genre = "Comedy",
-                        Price = 9.99M
+                        StudentId = "STD07",
+                        StudentName = "Nam",
+                        address = "Hà Nội",
+
                     },
 
-                    new Movie
+                    new Student
                     {
-                        Title = "Rio Bravo",
-                        ReleaseDate = DateTime.Parse("1959-4-15"),
-                        Genre = "Western",
-                        Price = 3.99M
+                        StudentId = "STD08",
+                        StudentName = "Nhi",
+                        address = "Hà Nội",
+
                     }
                 );
                 context.SaveChanges();

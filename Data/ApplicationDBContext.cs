@@ -4,7 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using MVCDEMO.Models;
-
+namespace MVCDEMO.Data
+{
     public class ApplicationDBContext : DbContext
     {
         public ApplicationDBContext (DbContextOptions<ApplicationDBContext> options)
@@ -20,3 +21,4 @@ using MVCDEMO.Models;
 
         public DbSet<MVCDEMO.Models.Employee> Employee { get; set; }
     }
+}
