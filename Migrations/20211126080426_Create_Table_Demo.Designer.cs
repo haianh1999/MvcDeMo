@@ -2,14 +2,16 @@
 using MVCDEMO.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace MvcDeMo.Migrations
 {
     [DbContext(typeof(ApplicationDBContext))]
-    partial class ApplicationDBContextModelSnapshot : ModelSnapshot
+    [Migration("20211126080426_Create_Table_Demo")]
+    partial class Create_Table_Demo
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -76,19 +78,6 @@ namespace MvcDeMo.Migrations
                     b.HasKey("EmployeeID");
 
                     b.ToTable("Employee");
-                });
-
-            modelBuilder.Entity("MVCDEMO.Models.Movie", b =>
-                {
-                    b.Property<string>("MovieID")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("MovieName")
-                        .HasColumnType("TEXT");
-
-                    b.HasKey("MovieID");
-
-                    b.ToTable("Movies");
                 });
 
             modelBuilder.Entity("MVCDEMO.Models.Person", b =>

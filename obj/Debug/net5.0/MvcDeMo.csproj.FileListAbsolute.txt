@@ -382,3 +382,13 @@ E:\netcore\MvcDeMo\obj\Debug\net5.0\Razor\Views\Doanviens\Delete.cshtml.g.cs
 E:\netcore\MvcDeMo\obj\Debug\net5.0\Razor\Views\Doanviens\Details.cshtml.g.cs
 E:\netcore\MvcDeMo\obj\Debug\net5.0\Razor\Views\Doanviens\Edit.cshtml.g.cs
 E:\netcore\MvcDeMo\obj\Debug\net5.0\Razor\Views\Doanviens\Index.cshtml.g.cs
+E:\netcore\MvcDeMo\obj\Debug\net5.0\Razor\Views\Demo\Create.cshtml.g.cs
+E:\netcore\MvcDeMo\obj\Debug\net5.0\Razor\Views\Demo\Delete.cshtml.g.cs
+E:\netcore\MvcDeMo\obj\Debug\net5.0\Razor\Views\Demo\Details.cshtml.g.cs
+E:\netcore\MvcDeMo\obj\Debug\net5.0\Razor\Views\Demo\Edit.cshtml.g.cs
+E:\netcore\MvcDeMo\obj\Debug\net5.0\Razor\Views\Demo\Index.cshtml.g.cs
+E:\netcore\MvcDeMo\obj\Debug\net5.0\Razor\Views\Movie\Create.cshtml.g.cs
+E:\netcore\MvcDeMo\obj\Debug\net5.0\Razor\Views\Movie\Delete.cshtml.g.cs
+E:\netcore\MvcDeMo\obj\Debug\net5.0\Razor\Views\Movie\Details.cshtml.g.cs
+E:\netcore\MvcDeMo\obj\Debug\net5.0\Razor\Views\Movie\Edit.cshtml.g.cs
+E:\netcore\MvcDeMo\obj\Debug\net5.0\Razor\Views\Movie\Index.cshtml.g.cs
