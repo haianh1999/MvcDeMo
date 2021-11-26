@@ -1,11 +1,23 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace MVCDEMO.Migrations
+namespace MvcDeMo.Migrations
 {
-    public partial class InitialCreate : Migration
+    public partial class addd : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.CreateTable(
+                name: "Chidoans",
+                columns: table => new
+                {
+                    cdid = table.Column<string>(type: "TEXT", nullable: false),
+                    tenchidoan = table.Column<string>(type: "TEXT", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Chidoans", x => x.cdid);
+                });
+
             migrationBuilder.CreateTable(
                 name: "Employee",
                 columns: table => new
@@ -46,32 +58,70 @@ namespace MVCDEMO.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Doanvien",
+                columns: table => new
+                {
+                    id = table.Column<string>(type: "TEXT", nullable: false),
+                    fullname = table.Column<string>(type: "TEXT", nullable: true),
+                    cdid = table.Column<string>(type: "TEXT", nullable: true),
+                    chidoancdid = table.Column<string>(type: "TEXT", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Doanvien", x => x.id);
+                    table.ForeignKey(
+                        name: "FK_Doanvien_Chidoans_chidoancdid",
+                        column: x => x.chidoancdid,
+                        principalTable: "Chidoans",
+                        principalColumn: "cdid",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Student",
                 columns: table => new
                 {
-                    StudentId = table.Column<string>(type: "TEXT", nullable: false),
+                    PersonID = table.Column<string>(type: "TEXT", nullable: false),
+                    StudentId = table.Column<string>(type: "TEXT", nullable: true),
                     StudentName = table.Column<string>(type: "TEXT", nullable: true),
                     address = table.Column<string>(type: "TEXT", nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Student", x => x.StudentId);
+                    table.PrimaryKey("PK_Student", x => x.PersonID);
+                    table.ForeignKey(
+                        name: "FK_Student_Person_PersonID",
+                        column: x => x.PersonID,
+                        principalTable: "Person",
+                        principalColumn: "PersonID",
+                        onDelete: ReferentialAction.Cascade);
                 });
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Doanvien_chidoancdid",
+                table: "Doanvien",
+                column: "chidoancdid");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Employee");
+                name: "Doanvien");
 
             migrationBuilder.DropTable(
-                name: "Person");
+                name: "Employee");
 
             migrationBuilder.DropTable(
                 name: "Product");
 
             migrationBuilder.DropTable(
                 name: "Student");
+
+            migrationBuilder.DropTable(
+                name: "Chidoans");
+
+            migrationBuilder.DropTable(
+                name: "Person");
         }
     }
 }

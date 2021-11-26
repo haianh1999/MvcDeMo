@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-using Asp.netCore.Models;
+using MVCDEMO.Models;
 using MVCDEMO.Data;
 using System;
 using System.Linq;
@@ -16,7 +16,7 @@ namespace MVCDEMO.Models
                     DbContextOptions<ApplicationDBContext>>()))
             {
                 // Look for any movies.
-                if (context.Movie.Any())
+                if (context.Student.Any())
                 {
                     return;   // DB has been seeded
                 }

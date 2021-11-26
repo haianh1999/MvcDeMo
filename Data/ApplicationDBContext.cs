@@ -20,5 +20,9 @@ namespace MVCDEMO.Data
         public DbSet<MVCDEMO.Models.Product> Product { get; set; }
 
         public DbSet<MVCDEMO.Models.Employee> Employee { get; set; }
+
+        public DbSet<MVCDEMO.Models.Chidoan> Chidoan { get; set; }
+
+        public DbSet<MVCDEMO.Models.Doanvien> Doanvien { get; set; }
     }
 }

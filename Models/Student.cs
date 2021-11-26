@@ -4,9 +4,8 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace MVCDEMO.Models
 {
     [Table("Student")]
-    public class Student
+    public class Student: Person
     {
-        [Key]
         [Display(Name = "ID")]
 
         public string StudentId { get; set; }

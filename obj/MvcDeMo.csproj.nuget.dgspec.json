@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Netcore3\\MvcDeMo\\MvcDeMo.csproj": {}
+    "E:\\netcore\\MvcDeMo\\MvcDeMo.csproj": {}
   },
   "projects": {
-    "E:\\Netcore3\\MvcDeMo\\MvcDeMo.csproj": {
+    "E:\\netcore\\MvcDeMo\\MvcDeMo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Netcore3\\MvcDeMo\\MvcDeMo.csproj",
+        "projectUniqueName": "E:\\netcore\\MvcDeMo\\MvcDeMo.csproj",
         "projectName": "MvcDeMo",
-        "projectPath": "E:\\Netcore3\\MvcDeMo\\MvcDeMo.csproj",
+        "projectPath": "E:\\netcore\\MvcDeMo\\MvcDeMo.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "E:\\Netcore3\\MvcDeMo\\obj\\",
+        "outputPath": "E:\\netcore\\MvcDeMo\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
