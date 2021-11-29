@@ -20,9 +20,33 @@ namespace MVCDEMO.Controllers
         }
 
         // GET: Product
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string productGenre, string searchString)
         {
-            return View(await _context.Product.ToListAsync());
+             // Use LINQ to get list of genres.
+            IQueryable<string> genreQuery = from m in _context.Product
+                                          orderby m.ProductID
+                                          select m.ProductName;
+
+            var Products = from m in _context.Product
+                           select m;
+
+            if (!string.IsNullOrEmpty(searchString))
+            {
+               Products = Products.Where(s => s.ProductName.Contains(searchString));
+            }
+
+            if (!string.IsNullOrEmpty(productGenre))
+            {
+               Products = Products.Where(x => x.ProductName == productGenre);
+            }
+
+               var ProductGenreVM = new ProductGenreViewModel
+            {
+               Genres = new SelectList(await genreQuery.Distinct().ToListAsync()),
+               Products = await Products.ToListAsync()
+            };
+
+             return View(ProductGenreVM);
         }
 
         // GET: Product/Details/5
@@ -78,6 +102,7 @@ namespace MVCDEMO.Controllers
             {
                 return NotFound();
             }
+
             return View(product);
         }
 
